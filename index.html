@@ -1,54 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maneesha's Coffee Shop</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f1ea; color: #333; margin: 0; padding: 20px; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 15px; shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #6F4E37; text-align: center; }
-        .menu-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding: 10px 0; }
-        .menu-item:last-child { border: none; }
-        .details h3 { margin: 0; color: #3e2723; }
-        .details p { margin: 5px 0; font-size: 0.9rem; color: #777; }
-        .price { font-weight: bold; color: #d17a22; font-size: 1.1rem; }
-        .order-btn { display: block; width: 100%; padding: 10px; background: #6F4E37; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
-        .order-btn:hover { background: #5a3e2b; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>☕ Brew & Bloom</h1>
-    <p style="text-align: center;">Freshly roasted coffee delivered to your desk.</p>
-
-    <div class="menu-item">
-        <div class="details">
-            <h3>Espresso</h3>
-            <p>Pure, bold, and energizing.</p>
-        </div>
-        <div class="price">Rs. 650</div>
-    </div>
-
-    <div class="menu-item">
-        <div class="details">
-            <h3>Cappuccino</h3>
-            <p>Rich espresso with steamed milk foam.</p>
-        </div>
-        <div class="price">Rs. 850</div>
-    </div>
-
-    <div class="menu-item">
-        <div class="details">
-            <h3>Iced Caramel Latte</h3>
-            <p>Sweet caramel over cold milk and ice.</p>
-        </div>
-        <div class="price">Rs. 980</div>
-    </div>
-
-    <button class="order-btn">Place Your Order</button>
+<div style="margin-top: 30px; border-top: 2px dashed #6F4E37; padding-top: 20px;">
+    <h3 style="color: #6F4E37;">📍 Visit Us</h3>
+    <p style="font-size: 0.9rem; margin: 5px 0;">Monday - Friday: 8:00 AM - 6:00 PM</p>
+    <p style="font-size: 0.9rem; margin: 5px 0;">Saturday: 9:00 AM - 4:00 PM</p>
+    <p style="font-size: 0.8rem; font-style: italic; color: #888;">Colombo, Sri Lanka</p>
 </div>
 
-</body>
-</html>
+<script>
+    document.querySelector('.order-btn').addEventListener('click', function() {
+        alert('Thank you for choosing Brew & Bloom! Your order is being prepared. ☕');
+    });
+</script>

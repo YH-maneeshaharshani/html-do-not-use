@@ -26,4 +26,22 @@
     document.querySelector('.order-btn').addEventListener('click', function() {
         alert('Thank you for choosing Brew & Bloom! Your order is being prepared. ☕');
     });
+
+
+    
+    // Existing Order Button Logic
+    document.querySelector('.order-btn').addEventListener('click', function() {
+        alert('Thank you for choosing Brew & Bloom! Your order is being prepared. ☕');
+    });
+
+    // New Feedback Logic
+    function sendFeedback() {
+        const input = document.getElementById('feedbackInput');
+        if(input.value.trim() !== "") {
+            document.getElementById('thankYouMsg').style.display = 'block';
+            input.value = ""; // Clear the box
+        } else {
+            alert("Please write something first!");
+        }
+    }
 </script>

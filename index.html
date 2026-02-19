@@ -49,6 +49,31 @@
     </div>
 
 <h2 style="color: #6F4E37; border-bottom: 2px solid #6F4E37; padding-bottom: 5px;">buy one get one free</h2>
+
+
+
+<!-- Order Button -->
+<div style="text-align:center; margin: 20px 0;">
+    <button class="order-btn" 
+            style="background:#6F4E37; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        Order Now
+    </button>
+</div>
+
+<!-- Feedback Section -->
+<div style="margin-top:20px; padding:10px; border:1px solid #ccc; border-radius:8px;">
+    <h3 style="color:#6F4E37;">💬 Share Your Feedback</h3>
+    <input type="text" id="feedbackInput" placeholder="Write your thoughts..." 
+           style="width:100%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #aaa;">
+    <button onclick="sendFeedback()" 
+            style="background:gold; color:#6F4E37; padding:8px 15px; border:none; border-radius:5px; cursor:pointer;">
+        Submit
+    </button>
+    <p id="thankYouMsg" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+        ✅ Thank you for your feedback!
+    </p>
+</div>
+
 <script>
     document.querySelector('.order-btn').addEventListener('click', function() {
         alert('Thank you for choosing Brew & Bloom! Your order is being prepared. ☕');
@@ -60,6 +85,7 @@
     document.querySelector('.order-btn').addEventListener('click', function() {
         alert('Thank you for choosing Brew & Bloom! Your order is being prepared. ☕');
     });
+    
 
     // New Feedback Logic
     function sendFeedback() {

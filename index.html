@@ -5,6 +5,7 @@
     <p style="font-size: 0.9rem; margin: 5px 0;">Monday - Friday: 8:00 AM - 6:00 PM</p>
     <p style="font-size: 0.9rem; margin: 5px 0;">Saturday: 9:00 AM - 4:00 PM</p>
     <p style="font-size: 0.9rem; margin: 5px 0;">www.cofeeDot.lk</p>
+     <p style="font-size: 0.9rem; margin: 5px 0;">www.facebk.com</p>
 
     <p style="font-size: 0.8rem; font-style: italic; color: #888;">Colombo, Sri Lanka</p>
 </div>
@@ -156,6 +157,9 @@
     Try It Now
   </button>
 </div>
+    <h2 style="color:#6F4E37;">⏳ Hurry! Today’s Special Ends In:</h2>
+<p id="countdown" style="font-size:1.2rem; font-weight:bold; color:red;"></p>
+
 
 
 
@@ -182,4 +186,22 @@
             alert("Please write something first!");
         }
     }
+
+   
+  const endTime = new Date();
+  endTime.setHours(23,59,59,999);
+  function updateCountdown() {
+    const now = new Date();
+    const diff = endTime - now;
+    if(diff > 0) {
+      const hrs = Math.floor(diff / (1000*60*60));
+      const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const secs = Math.floor((diff % (1000*60)) / 1000);
+      document.getElementById("countdown").innerText = `${hrs}h ${mins}m ${secs}s`;
+    } else {
+      document.getElementById("countdown").innerText = "Offer expired!";
+    }
+  }
+  setInterval(updateCountdown, 1000);
+
 </script>

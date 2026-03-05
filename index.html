@@ -168,8 +168,33 @@
   <p style="font-style:italic; color:#555;">"Love the cozy vibes and crispy bread!" – Tharushi</p>
 </div>
 
+<h2 style="color:#6F4E37; border-bottom:2px solid #6F4E37; padding-bottom:5px;">🎡 Spin & Win</h2>
+<div style="padding:15px; background:#f9f9f9; border-radius:8px; text-align:center; margin-bottom:20px;">
+  <p style="margin:5px 0; font-size:1rem; font-weight:bold; color:#6F4E37;">
+    Try your luck! Spin the wheel and win exciting offers.
+  </p>
+  <button onclick="spinWheel()" 
+          style="background:gold; color:#6F4E37; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+    Spin Now
+  </button>
+  <p id="spinResult" style="margin-top:10px; font-size:1rem; font-weight:bold; color:green;"></p>
+</div>
+
 
 <script>
+
+   function spinWheel() {
+    const prizes = [
+      "🎁 Free Classic Brew",
+      "💸 20% Off Your Bill",
+      "🥛 Free Oat Latte",
+      "🍫 Free Choco Mocha",
+      "🌟 Double Loyalty Points",
+      "😋 Free Crispy Bread"
+    ];
+    const randomPrize = prizes[Math.floor(Math.random() * prizes.length)];
+    document.getElementById("spinResult").innerText = `You won: ${randomPrize}!`;
+  }
     document.querySelector('.order-btn').addEventListener('click', function() {
         alert('Thank you for choosing Brew & Bloom! Your order is being prepared. ☕');
     });
